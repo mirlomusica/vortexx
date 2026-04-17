@@ -1,11 +1,58 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import "animate.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+    <h1>Vortex</h1>
+
+    <picture id="logo" class="animate__animated animate__bounce">
+        <source srcset="src/assets/vortexx-logo.avif" />
+        <source srcset="src/assets/vortexx-logo.webp" />
+        <img src="src/assets/vortexx-logo.png" alt="vortexx classic" />
+    </picture>
+    <div id="cans">
+        <picture class="animate__animated animate__bounce can">
+            <source srcset="src/assets/vortexx-max.avif" />
+            <source srcset="src/assets/vortexx-max.webp" />
+            <img src="src/assets/vortexx-max.png" alt="vortexx classic" />
+        </picture>
+
+        <picture class="animate__animated animate__bounce can">
+            <source srcset="src/assets/vortexx-mint.avif" />
+            <source srcset="src/assets/vortexx-mint.webp" />
+            <img src="src/assets/vortexx-mint.png" alt="vortexx classic" />
+        </picture>
+
+        <picture class="animate__animated animate__bounce can">
+            <source srcset="src/assets/vortexx-lemon.avif" />
+            <source srcset="src/assets/vortexx-lemon.webp" />
+            <img src="src/assets/vortexx-lemon.png" alt="vortexx classic" />
+        </picture>
+
+        <picture class="animate__animated animate__bounce can">
+            <source srcset="src/assets/vortexx-light.avif" />
+            <source srcset="src/assets/vortexx-light.webp" />
+            <img src="src/assets/vortexx-light.png" alt="vortexx classic" />
+        </picture>
+    </div>
+    <style>
+        #cans {
+            display: flex;
+            width: 80%;
+            justify-content: space-around;
+        }
+
+        .can:hover {
+            background-color: red;
+            animation: shake;
+            animation-duration: 1s;
+        }
+
+
+    </style>
 </Layout>
