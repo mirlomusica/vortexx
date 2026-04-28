@@ -8,51 +8,102 @@ import "animate.css";
 ---
 
 <Layout>
-    <h1>Vortex</h1>
-
-    <picture id="logo" class="animate__animated animate__bounce">
-        <source srcset="/images/vortexx-logo.avif" />
-        <source srcset="/images/vortexx-logo.webp" />
-        <img src="/images/vortexx-logo.png" alt="vortexx classic" />
-    </picture>
-    <div id="cans">
-        <picture class="animate__animated animate__bounce can">
-            <source srcset="/images/vortexx-max.avif" />
-            <source srcset="/images/vortexx-max.webp" />
-            <img src="/images/vortexx-max.png" alt="vortexx classic" />
+    <div id="layout">
+        <div id="hero">
+            <video
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="auto"
+                poster="/images/loading.png"
+            >
+                <source src="/video/hero_video.webm" type="video/mp4" />
+                <source src="/video/hero_video.mp4" type="video/mp4" />
+            </video>
+            <div id="overlay">
+                <p style="color:rgb(197, 126, 126)">FEEL</p>
+                <p style="color: rgb(145, 230, 233);">THE</p>
+                <p style="color: rgb(172, 26, 26);"><b>RUSH</b></p>
+            </div>
+        </div>
+        <picture id="logo" class="animate__animated animate__bounce">
+            <source srcset="/images/vortexx-logo.avif" />
+            <source srcset="/images/vortexx-logo.webp" />
+            <img src="/images/vortexx-logo.png" alt="vortexx classic" />
         </picture>
+        <div id="cans">
+            <picture class="animate__animated animate__bounce can">
+                <source srcset="/images/vortexx-max.avif" />
+                <source srcset="/images/vortexx-max.webp" />
+                <img src="/images/vortexx-max.png" alt="vortexx classic" />
+            </picture>
 
-        <picture class="animate__animated animate__bounce can">
-            <source srcset="/images/vortexx-mint.avif" />
-            <source srcset="/images/vortexx-mint.webp" />
-            <img src="/images/vortexx-mint.png" alt="vortexx mint" />
-        </picture>
+            <picture class="animate__animated animate__bounce can">
+                <source srcset="/images/vortexx-mint.avif" />
+                <source srcset="/images/vortexx-mint.webp" />
+                <img src="/images/vortexx-mint.png" alt="vortexx mint" />
+            </picture>
 
-        <picture class="animate__animated animate__bounce can">
-            <source srcset="/images/vortexx-lemon.avif" />
-            <source srcset="/images/vortexx-lemon.webp" />
-            <img src="/images/vortexx-lemon.png" alt="vortexx lemon" />
-        </picture>
+            <picture class="animate__animated animate__bounce can">
+                <source srcset="/images/vortexx-lemon.avif" />
+                <source srcset="/images/vortexx-lemon.webp" />
+                <img src="/images/vortexx-lemon.png" alt="vortexx lemon" />
+            </picture>
 
-        <picture class="animate__animated animate__bounce can">
-            <source srcset="/images/vortexx-light.avif" />
-            <source srcset="/images/vortexx-light.webp" />
-            <img src="/images/vortexx-light.png" alt="vortexx light" />
-        </picture>
+            <picture class="animate__animated animate__bounce can">
+                <source srcset="/images/vortexx-light.avif" />
+                <source srcset="/images/vortexx-light.webp" />
+                <img src="/images/vortexx-light.png" alt="vortexx light" />
+            </picture>
+        </div>
     </div>
     <style>
+        #layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
         #cans {
             display: flex;
+            flex-wrap: wrap;
             width: 80%;
-            justify-content: space-around;
+            text-align: center;
+            justify-content: center;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+        .can img,
+        #logo img {
+            max-width: 100%;
+            height: auto;
         }
 
         .can:hover {
-            background-color: red;
-            animation: shake;
-            animation-duration: 1s;
+            animation: animated_bounce;
+            animation-duration: 10s;
         }
+        #hero {
+            width: 100%;
+            overflow: hidden;
+        }
+        #hero video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        #hero #overlay {
+            position: absolute;
 
-
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow:
+                1px 1px 5px,
+                1px 1px 5px;
+            font-style: italic;
+            font-size: 5vw;
+            top: 10vw;
+            left: 10vw;
+        }
     </style>
 </Layout>
