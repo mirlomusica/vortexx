@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "animate.css";
+import Nav from "../components/Nav.astro";
+---
+
+<Layout>
+    <h1 id="title">VORTEX MAX</h1>
+
+    <div id="pitch">
+        <div id="text">
+            <h1>PUSH PAST THE LIMIT</h1>
+            <h2>When “enough” isn’t enough, Vortexx Max steps in.</h2>
+            <p>
+                Built for surfers who go harder, stay longer, and refuse to back
+                off, this is your high-impact boost when the session demands
+                everything you’ve got. Max delivers a stronger hit of energy to
+                keep your reactions sharp and your endurance locked in, even
+                when the waves—and the pressure—keep building. Late drops, heavy
+                sets, long paddles—this is where Max thrives. No holding back.
+                No slowing down. Just raw, amplified energy to take you further
+                than before.
+            </p>
+        </div>
+        <picture class="animate__animated animate__bounce can">
+            <source srcset="/images/vortexx-max.avif" />
+            <source srcset="/images/vortexx-max.webp" />
+            <img src="/images/vortexx-max.png" alt="vortexx max" />
+        </picture>
+    </div>
+
+    <style>
+        #title {
+            font-size: 8vw;
+            justify-self: center;
+            color: #4c9ea4;
+        }
+
+        #pitch {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            text-align: center;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+        }
+        #pitch #text {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            text-align: left;
+            align-self: stretch;
+            background-color: #4c9ea4;
+            width: 40%;
+            padding: 2rem;
+            box-shadow: 0 0 20px 10px #4c9ea4;
+            border-radius: 5px;
+        }
+        #pitch #text h1 {
+            color: rgb(7, 56, 56);
+            text-shadow: 0 0 20px 10px;
+        }
+        #pitch #text h2 {
+            color: rgb(14, 117, 117);
+            text-shadow: 0 0 20px 10px;
+        }
+        #pitch #text p {
+            color: rgb(11, 88, 88);
+        }
+    </style>
+</Layout>

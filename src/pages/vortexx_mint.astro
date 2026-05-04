@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "animate.css";
+import Nav from "../components/Nav.astro";
+---
+
+<Layout>
+    <h1 id="title">VORTEX MINT</h1>
+
+    <div id="pitch">
+        <div id="text">
+            <h1>COOL UNDER PRESSURE</h1>
+
+            <h2>
+                When the session heats up, Vortexx Mint keeps you in control
+            </h2>
+            <p>
+                Infused with a crisp, cooling edge, it delivers a refreshing
+                burst of energy that helps you stay calm, focused, and ready for
+                whatever the ocean throws your way. It’s built for those moments
+                when precision matters—tight turns, fast reactions, and total
+                clarity in the water. Smooth, clean, and invigorating, Mint
+                keeps your head clear and your performance sharp from start to
+                finish. Stay cool. Stay sharp. Ride the moment.
+            </p>
+        </div>
+        <picture class="animate__animated animate__bounce can">
+            <source srcset="/images/vortexx-mint.avif" />
+            <source srcset="/images/vortexx-mint.webp" />
+            <img src="/images/vortexx-mint.png" alt="vortexx mint" />
+        </picture>
+    </div>
+
+    <style>
+        #title {
+            justify-self: center;
+            font-size: 8vw;
+            color: #a7e753;
+        }
+
+        #pitch {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            text-align: center;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+        }
+        #pitch #text {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            text-align: left;
+            align-self: stretch;
+            background-color: #a7e753;
+            width: 40%;
+            padding: 2rem;
+            box-shadow: 0 0 20px 10px #a7e753;
+            border-radius: 5px;
+        }
+        #pitch #text h1 {
+            color: rgb(7, 56, 56);
+            text-shadow: 0 0 20px 10px;
+        }
+        #pitch #text h2 {
+            color: rgb(14, 156, 156);
+            text-shadow: 0 0 20px 10px;
+        }
+        #pitch #text p {
+            color: rgb(11, 88, 88);
+        }
+    </style>
+</Layout>

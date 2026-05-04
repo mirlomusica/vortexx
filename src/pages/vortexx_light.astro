@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "animate.css";
+import Nav from "../components/Nav.astro";
+---
+
+<Layout>
+    <h1 id="title">VORTEX light</h1>
+
+    <div id="pitch">
+        <div id="text">
+            <h1>EFFORTLESS ENERGY</h1>
+            <h2>For days when you want to keep it smooth</h2>
+            <p>
+                Vortexx Light delivers a clean, easy lift without the intensity.
+                It’s a lighter kind of boost—subtle, balanced, and made to move
+                with you, not overwhelm you. Perfect for long sessions and
+                laid-back rides, Light keeps your focus steady and your body in
+                sync with every wave. No spikes, no crash—just a consistent flow
+                that lets you stay out longer and enjoy every moment. Less
+                weight. Same rhythm. Total freedom.
+            </p>
+        </div>
+        <picture class="animate__animated animate__bounce can">
+            <source srcset="/images/vortexx-light.avif" />
+            <source srcset="/images/vortexx-light.webp" />
+            <img src="/images/vortexx-light.png" alt="vortexx light" />
+        </picture>
+    </div>
+
+    <style>
+        #title {
+            font-size: 8vw;
+            justify-self: center;
+            color: #86c9c6;
+        }
+
+        #pitch {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            text-align: center;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+        }
+        #pitch #text {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            text-align: left;
+            align-self: stretch;
+            background-color: #86c9c6;
+            width: 40%;
+            padding: 2rem;
+            box-shadow: 0 0 20px 10px #86c9c6;
+            border-radius: 5px;
+        }
+        #pitch #text h1 {
+            color: rgb(7, 56, 56);
+            text-shadow: 0 0 20px 10px;
+        }
+        #pitch #text h2 {
+            color: rgb(12, 110, 110);
+            text-shadow: 0 0 20px 10px;
+        }
+        #pitch #text p {
+            color: rgb(11, 88, 88);
+        }
+    </style>
+</Layout>

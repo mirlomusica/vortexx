@@ -1,10 +1,6 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import "animate.css";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
@@ -33,36 +29,44 @@ import "animate.css";
             <img src="/images/vortexx-logo.png" alt="vortexx classic" />
         </picture>
         <div id="cans">
-            <picture class="animate__animated animate__bounce can">
-                <source srcset="/images/vortexx-max.avif" />
-                <source srcset="/images/vortexx-max.webp" />
-                <img src="/images/vortexx-max.png" alt="vortexx classic" />
-            </picture>
+            <a href="/vortexx_max">
+                <picture class="animate__animated animate__bounce can">
+                    <source srcset="/images/vortexx-max.avif" />
+                    <source srcset="/images/vortexx-max.webp" />
+                    <img src="/images/vortexx-max.png" alt="vortexx classic" />
+                </picture>
+            </a>
 
-            <picture class="animate__animated animate__bounce can">
-                <source srcset="/images/vortexx-mint.avif" />
-                <source srcset="/images/vortexx-mint.webp" />
-                <img src="/images/vortexx-mint.png" alt="vortexx mint" />
-            </picture>
+            <a href="/vortexx_mint">
+                <picture class="animate__animated animate__bounce can">
+                    <source srcset="/images/vortexx-mint.avif" />
+                    <source srcset="/images/vortexx-mint.webp" />
+                    <img src="/images/vortexx-mint.png" alt="vortexx mint" />
+                </picture>
+            </a>
 
-            <picture class="animate__animated animate__bounce can">
-                <source srcset="/images/vortexx-lemon.avif" />
-                <source srcset="/images/vortexx-lemon.webp" />
-                <img src="/images/vortexx-lemon.png" alt="vortexx lemon" />
-            </picture>
+            <a href="/vortexx_lemon">
+                <picture class="animate__animated animate__bounce can">
+                    <source srcset="/images/vortexx-lemon.avif" />
+                    <source srcset="/images/vortexx-lemon.webp" />
+                    <img src="/images/vortexx-lemon.png" alt="vortexx lemon" />
+                </picture>
+            </a>
 
-            <picture class="animate__animated animate__bounce can">
-                <source srcset="/images/vortexx-light.avif" />
-                <source srcset="/images/vortexx-light.webp" />
-                <img src="/images/vortexx-light.png" alt="vortexx light" />
-            </picture>
+            <a href="/vortexx_light">
+                <picture class="animate__animated animate__bounce can">
+                    <source srcset="/images/vortexx-light.avif" />
+                    <source srcset="/images/vortexx-light.webp" />
+                    <img src="/images/vortexx-light.png" alt="vortexx light" />
+                </picture>
+            </a>
         </div>
     </div>
     <div id="pitch">
         <div id="text">
             <h1>FEEL THE RUSH</h1>
+            <h2>Ride the wave harder, longer, and with unstoppable energy.</h2>
             <p>
-                Ride the wave harder, longer, and with unstoppable energy.
                 Vortexx is built for surfers who chase the thrill—packed with a
                 surge of revitalizing power that keeps you sharp, focused, and
                 ready for every swell. Whether you're carving through glassy
@@ -97,6 +101,7 @@ import "animate.css";
         .can:hover {
             animation: animated_bounce;
             animation-duration: 10s;
+            background-color: rgb(1, 104, 104);
         }
         #hero {
             width: 100%;
@@ -116,7 +121,7 @@ import "animate.css";
                 1px 1px 5px;
             font-style: italic;
             font-size: 5vw;
-            top: 10vw;
+            top: 15vw;
             left: 10vw;
         }
         #pitch {
@@ -133,8 +138,9 @@ import "animate.css";
         #pitch #text {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: left;
+            text-align: left;
+
             align-self: stretch;
             background-color: rgb(56, 219, 219);
             width: 40%;
@@ -146,8 +152,12 @@ import "animate.css";
             color: rgb(7, 56, 56);
             text-shadow: 0 0 20px 10px;
         }
+        #pitch #text h2 {
+            color: rgb(10, 97, 97);
+            text-shadow: 0 0 20px 10px;
+        }
         #pitch #text p {
-            color: rgb(11, 88, 88);
+            color: rgb(13, 124, 124);
         }
     </style>
 </Layout>

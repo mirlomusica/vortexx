@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "animate.css";
+import Nav from "../components/Nav.astro";
+---
+
+<Layout>
+    <h1 id="title">VORTEX LEMON</h1>
+
+    <div id="pitch">
+        <div id="text">
+            <h1>STAY SHARP, RIDE CLEAN</h1>
+            <h2>Crisp, zesty, and built for clarity</h2>
+            <p>
+                Vortexx Lemon brings a refreshing edge to every session. It’s a
+                lighter, sharper kind of energy—perfect for staying focused
+                without feeling weighed down. When the sun’s high and the waves
+                keep rolling, Lemon keeps you dialed in with a clean boost that
+                matches your rhythm. Smooth paddles, quick reactions, and a
+                clear head from the first wave to the last. Fresh taste. Clean
+                energy. Pure flow.
+            </p>
+        </div>
+        <picture class="animate__animated animate__bounce can">
+            <source srcset="/images/vortexx-lemon.avif" />
+            <source srcset="/images/vortexx-lemon.webp" />
+            <img src="/images/vortexx-lemon.png" alt="vortexx lemon" />
+        </picture>
+    </div>
+
+    <style>
+        #title {
+            justify-self: center;
+            font-size: 8vw;
+            color: #e2e3a0;
+        }
+
+        #pitch {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            text-align: center;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+        }
+        #pitch #text {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            text-align: left;
+            justify-content: center;
+            align-self: stretch;
+            background-color: #e2e3a0;
+            width: 40%;
+            padding: 2rem;
+            box-shadow: 0 0 20px 10px #e2e3a0;
+            border-radius: 5px;
+        }
+        #pitch #text h1 {
+            color: rgb(7, 56, 56);
+            text-shadow: 0 0 20px 10px;
+        }
+        #pitch #text h2 {
+            color: rgb(14, 122, 122);
+            text-shadow: 0 0 20px 10px;
+        }
+        #pitch #text p {
+            color: rgb(11, 88, 88);
+        }
+    </style>
+</Layout>

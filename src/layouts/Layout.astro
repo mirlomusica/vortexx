@@ -1,3 +1,8 @@
+---
+import Nav from "../components/Nav.astro";
+import Foot from "../components/Foot.astro";
+---
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -9,7 +14,9 @@
         <title>VORTEXX</title>
     </head>
     <body>
+        <Nav />
         <slot />
+        <Foot />
     </body>
 </html>
 
